@@ -1,17 +1,14 @@
 app.controller('animalCtrl', function($scope, $routeParams, AnimalFact) {
 
-  console.log("$routeParams.id:", $routeParams.id)
-  $scope.animalId = $routeParams.id
-  console.log("$scope.animalId:", $scope.animalId)
-
-  const popPage = (id) => {
-    AnimalFact.getOneAnimal()
+  const popPage = (id) => { // retrieving the single animal obj, given the id
+    AnimalFact.getOneAnimal(id)
       .then((animal) => {
         console.log("animal:", animal)
         $scope.animal = animal
+        $scope.$apply()
       })
   }
 
-  popPage($routeParams.id)
+  popPage($routeParams.id) // passing in the specific animal id via route params
 
 })
