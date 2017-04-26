@@ -40,6 +40,13 @@ body {
   margin: 4% 3% 0 3%;
 }
 
+/*_________single animal page__________*/
+.single-animal {
+  margin: 5% 10%;
+}
+
+
+/*_________edits page__________*/
 .deleteZookeeperButton{
   display: inline;
 }
