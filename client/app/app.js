@@ -16,7 +16,11 @@ app.config(['$routeProvider', function($routeProvider){
       })
       .when('/animals/:id', {
         templateUrl: 'partials/singleAnimal.html',
-        controller: 'animalCtrl',
+        controller: 'animalCtrl'
+      })
+      .when('/trainers', {
+        templateUrl: 'partials/trainers.html',
+        controller: 'TrainersCtrl'
       })
       .otherwise({
         redirectTo: '/'
