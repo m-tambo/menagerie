@@ -1,10 +1,28 @@
-app.factory('AnimalFact', function($http) { 
+app.factory('AnimalFact', function($http) {
 
   return {
     getAll: function() {
         return new Promise((resolve, reject) =>{
-          $http.get(`http://localhost:3000/api/allAnimals`)
+          $http.get(`http://localhost:3000/api/v1/animals`)
             .then((data) => {
+              resolve(data.data)
+            })
+        })
+      },
+    getOneAnimal: function(id) {
+        return new Promise((resolve, reject) =>{
+          $http.get(`http://localhost:3000/api/v1/animals/${id}`)
+            .then((data) => {
+              console.log("data:", data)
+              resolve(data)
+            })
+        })
+      },
+    getAnimalsKeepers: function() {
+        return new Promise((resolve, reject) =>{
+          $http.get(`http://localhost:3000/api/v1/keepers`)
+            .then((data) => {
+              console.log("keepers:", data)
               resolve(data.data)
             })
         })
