@@ -1,6 +1,25 @@
 body {
-  background-color: lightgray;
+  background-color: #dfee9b;
 }
+
+/*_________main page__________*/
+#title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5em;
+  margin: 7% 20%;
+}
+
+.title-pic {
+  background-image: url('http://staugustine.com/sites/default/files/styles/slideshow__640x360/public/images/1077367_web1_copy_SAR_NEW_2017_01_25_farm-3.jpg?itok=j7IlGEU6');
+  min-height: 600px;
+  background-size: cover;
+  margin: -5%;
+}
+
+.main-title {
+  font-size: 2em;
+}
+
 
 .animalCard {
   border: 1px solid black;
@@ -17,17 +36,6 @@ body {
   margin: 5%;
 }
 
-.titlePic {
-  width: 275px;
-  display: inline;
-}
-
-#title {
-  display: inline;
-  font-size: 5em;
-  margin: auto;
-}
-
 .deleteZookeeperButton{
   display: inline;
 }
@@ -35,6 +43,3 @@ body {
 .zookeeperDeleteName {
   display: inline;
 }
-
-
-
