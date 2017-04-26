@@ -6,26 +6,9 @@
 <br />
 
   <div class="keeperCard" ng-repeat="keeper in keepers">
-  <img class="animalPic" src="http://www.oregonzoo.org/sites/default/files/styles/article-full/public/H_caracal-kitten_1.jpg?itok=DsNk2oS2">
+  <img class="animalPic" ng-src="{{keeper.img}}">
   <a href='#!/keepers/{{keeper.id}}'><p><b>{{ keeper.name }}</b></p></a>
   <p>Age: {{keeper.age}} years old</p>
   <p>Gender: {{keeper.gender}} </p>
   <p>Bio: {{keeper.bio}}</p>
-    <span ng-if="animal.zookeepers.length === 0">
-      no one
-    </span>
-    <span ng-repeat="zookeeper in animal.zookeepers">
-      {{$last? ' and ' : ''}}{{zookeeper.name}}{{$last? '.' : ', '}}
-    </span>
-    <div>
-      <input type="button" value="remove" ng-click="remove(animal._id)">
-      <input type="button" value="edit" ng-click="editing = !editing">
-    </div>
-    <div ng-if="editing">
-      <input type="text" ng-model="keeper.name">
-      <input type="text" ng-model="keeper.age">
-      <input type="text" ng-model="keeper.gender">
-      <input type="text" ng-model="keeper.bio">
-      <input type="button" value="save" ng-click="save(animal._id, animal)">
-    </div>
   </div>
