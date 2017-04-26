@@ -1,1 +1,18 @@
-<h1>Individual animal: {{animal.name}}</h1>
+<div class="single-animal">
+  <img src={{animal.img}} />
+  <h1>Meet {{animal.name}}</h1>
+  <p>
+    <span ng-if="animal.gender === 'Male'">He</span>
+    <span ng-if="animal.gender === 'Feale'">She</span>
+    is a {{animal.age}} year old {{animal.species}}
+  </p>
+  <h3>{{animal.name}}'s Keeper:</h3>
+  <p></p>
+  <h3>{{animal.name}}'s Trainer:</h3>
+  <p></p>
+
+</div>
+
+<a href="/#!/"><input type="button" class="route-btn" value="Home"></a>
+<a href="/#!/zoo"><input type="button" class="route-btn" value="View Animals"></a>
+<a href="/#!/add"><input type="button" class="route-btn" value="Make Edits"></a>

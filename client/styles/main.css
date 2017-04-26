@@ -40,10 +40,34 @@ body {
   margin: 4% 3% 0 3%;
 }
 
+/*_________single animal page__________*/
+.single-animal {
+  margin: 5% 10%;
+}
+
+
+/*_________edits page__________*/
 .deleteZookeeperButton{
   display: inline;
 }
 
 .zookeeperDeleteName {
   display: inline;
+}
+
+
+/*_________misc__________*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.route-btn {
+  border: 1px solid;
+  min-height: 35px;
+  border-radius: 3px;
+  font-family: 'Great Vibes', cursive;
+  font-size: x-large;
+  padding: 2%;
+  background-color: antiquewhite;
 }
