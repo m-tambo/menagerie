@@ -4,8 +4,9 @@ app.factory('ZookeeperFact', function($http){
     return {
     getAll: function() {
         return new Promise((resolve, reject) =>{
-          $http.get(`http://localhost:3000/api/allZookeepers`)
+          $http.get(`http://localhost:3000/api/v1/keepers`)
             .then((data) => {
+              console.log(`got some keepers`, data)
               resolve(data.data)
             })
         })

@@ -1,15 +1,17 @@
-<h1>ZOO!</h1>
+<h1 id="title"><span class="main-title">Menagerie</span></h1>
 
-<a href="/#!/add"><input type="button" value="edit your zoo"></a>
-<a href="/#!/zoo"><input type="button" value="look at your zoo"></a>
-<a href="/#!/"><input type="button" value="home"></a>
+<a href="/#!/"><input type="button" value="Home"></a>
+<a href="/#!/add"><input type="button" value="Make Edits"></a>
 
-<h2>Look at all these animals you have!</h2>
+<br />
 
   <div class="animalCard" ng-repeat="animal in animals">
   <img class="animalPic" src="http://www.oregonzoo.org/sites/default/files/styles/article-full/public/H_caracal-kitten_1.jpg?itok=DsNk2oS2">
-  {{ animal.name }} is a {{animal.age}} year old {{animal.species}} cared for by 
-    <span ng-if="animal.zookeepers.length === 0"> 
+  <a href='#!/animals/{{animal.id}}'><p><b>{{ animal.name }}</b></p></a>
+  <p>Species: {{animal.species}}</p>
+  <p>Age: {{animal.age}} years old </p>
+  <p>Keeper: </p>
+    <span ng-if="animal.zookeepers.length === 0">
       no one
     </span>
     <span ng-repeat="zookeeper in animal.zookeepers">
