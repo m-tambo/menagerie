@@ -53,6 +53,6 @@ app.factory('AnimalFact', function($http) {
         })
         .catch((err) => console.log("err:", err))
       })
-    } 
+    }
   }
 });
