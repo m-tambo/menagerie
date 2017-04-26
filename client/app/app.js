@@ -5,13 +5,20 @@ app.config(['$routeProvider', function($routeProvider){
       .when('/', {
         templateUrl: 'partials/home.html',
         controller: 'HomeCtrl'
-      }).when('/add', {
+      })
+      .when('/add', {
         templateUrl: 'partials/addAnimals.html',
         controller: 'AddAnimalCtrl'
-      }).when('/zoo', {
+      })
+      .when('/zoo', {
         templateUrl: 'partials/zoo.html',
         controller: 'ZooCtrl'
-      }).otherwise({
+      })
+      .when('/animals/:id', {
+        templateUrl: 'partials/singleAnimal.html',
+        controller: 'animalCtrl',
+      })
+      .otherwise({
         redirectTo: '/'
       })
 }])
