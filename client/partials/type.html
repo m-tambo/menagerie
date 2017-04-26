@@ -1,0 +1,25 @@
+<h1 id="title"><span class="main-title">Menagerie</span></h1>
+
+<a href="/#!/"><input type="button" value="Home"></a>
+<a href="/#!/add"><input type="button" value="Make Edits"></a>
+
+<br />
+
+  <div class="typeCard" ng-repeat="type in types">
+  <a href='#!/types/{{type.id}}'><p><b>{{ type.type }}</b></p></a>
+  <p>types: {{types.type}}</p>
+    <span ng-if="animal.zookeepers.length === 0">
+      no one
+    </span>
+    <span ng-repeat="zookeeper in animal.zookeepers">
+      {{$last? ' and ' : ''}}{{zookeeper.name}}{{$last? '.' : ', '}}
+    </span>
+    <div>
+      <input type="button" value="remove" ng-click="remove(animal._id)">
+      <input type="button" value="edit" ng-click="editing = !editing">
+    </div>
+    <div ng-if="editing">
+      <input type="text" ng-model="type.type">
+      <input type="button" value="save" ng-click="save(animal._id, animal)">
+    </div>
+  </div>
