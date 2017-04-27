@@ -35,6 +35,20 @@ body {
   line-height: .3em;
 }
 
+/*_________keeper page__________*/
+.keeperCard {
+  border: 1px solid black;
+  padding: 2px;
+  margin: 5px;
+  display: inline-block;
+  width: 18%;
+  height: 270px;
+  overflow: scroll;
+  background-color: #fafafa;
+  text-align: center;
+  line-height: .3em;
+}
+
 .animalPic {
   width: 90%;
   margin: 4% 3% 0 3%;
