@@ -1,6 +1,7 @@
 body {
-  background-color: #dfee9b;
+  background-color: #aecda4;
 }
+
 
 /*_________main page__________*/
 #title {
@@ -10,14 +11,19 @@ body {
 }
 
 .title-pic {
-  background-image: url('http://staugustine.com/sites/default/files/styles/slideshow__640x360/public/images/1077367_web1_copy_SAR_NEW_2017_01_25_farm-3.jpg?itok=j7IlGEU6');
-  min-height: 600px;
+  background-image: url('../peacock.jpg');
+  min-height: 350px;
   background-size: cover;
   margin: -5%;
+  opacity: .9;
 }
 
 .main-title {
   font-size: 2em;
+}
+
+.home-btns {
+  margin: -2% 0 0 30%;
 }
 
 
