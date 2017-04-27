@@ -1,5 +1,4 @@
 app.controller('keeperCtrl', function($scope, ZookeeperFact){
-  console.log('keeperctrl firing')
 $scope.editing = false
 
 const popPage = () =>{
@@ -8,10 +7,6 @@ const popPage = () =>{
       $scope.keepers = keepers
       $scope.$apply()
     })
-  // AnimalFact.getAnimalsKeepers()
-  //   .then((keepers) => {
-  //     $scope.keepers = keepers
-  //   })
 }
 
 popPage()

@@ -3,11 +3,19 @@
 <fieldset>
   <div>
     <label for="name">Name</label>
-    <input type="text" ng-model="newAnimal.name" placeholder="Francine" name="name">
+      <input type="text" ng-model="newAnimal.name" placeholder="Francine" name="name">
     <label for="species">Species</label>
-    <input type="text" ng-model="newAnimal.species" placeholder="Penguin" name="species">
+      <input type="text" ng-model="newAnimal.species" placeholder="Penguin" name="species">
     <label for="age">Age</label>
-    <input type="number" ng-model="newAnimal.age" placeholder="3" name="age">
+      <input type="number" ng-model="newAnimal.age" placeholder="5" name="age">
+    <select ng-model="newAnimal.gender" name="gender">
+      <option value="Male" > Male </option>
+      <option value="Female"> Female </option>
+    </select>
+    <label for="age">Image</label>
+      <input type="text" ng-model="newAnimal.img" placeholder="www.pic.org" name="img">
+    <label for="age">Type</label>
+      <input type="number" ng-model="newAnimal.type" placeholder="1" name="type">
     <div ng-repeat="zookeeper in zookeepers">
       <input type="checkbox" name={{zookeeper.name}} value={{zookeeper.name}} ng-model="zookeeper.checked">
       <label for={{zookeeper.name}}>{{zookeeper.name}}</label>
@@ -16,16 +24,28 @@
   </div>
 </fieldset>
 
-<h1>Add Zookeepers Here</h1>
+<h1>Add Keepers Here</h1>
 <fieldset>
   <div>
-    <label for="name">zookeeper name</label>
-    <input type="text" ng-model="newZookeeper.name" placeholder="Suzie">
+    <label for="name">Name</label>
+      <input type="text" ng-model="newZookeeper.name" placeholder="Suzie">
+    <label for="age">Age</label>
+      <input type="number" ng-model="newZookeeper.age" placeholder="21">
+    <select ng-model="newZookeeper.gender" name="gender">
+      <option value="Male" > Male </option>
+      <option value="Female"> Female </option>
+    </select>
+    <label for="bio">Bio</label>
+      <input type="text" ng-model="newZookeeper.bio" placeholder="likes animals">
+    <label for="img">Pic</label>
+      <input type="text" ng-model="newZookeeper.img" placeholder="www.pic.org">
+    <label for="shift">Shift</label>
+      <input type="text" ng-model="newZookeeper.shift" placeholder="Mon-Fri">
     <input type="button" value="add zookeeper" ng-click="addZookeeper()">
   </div>
 </fieldset>
 
-<h1>Delete Zookeepers Here</h1>
+<h1>Delete Keepers Here</h1>
 <fieldset>
   <div ng-repeat="zookeeper in zookeepers">
     <div>

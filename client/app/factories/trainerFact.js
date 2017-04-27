@@ -1,10 +1,11 @@
 app.factory('TrainerFact', function($http){
-  console.log("here's the trainer factory")
+
+  const server = 'https://menagerie-api-123.herokuapp.com/api/v1'
 
     return {
     getAll: function() {
         return new Promise((resolve, reject) =>{
-          $http.get(`http://localhost:3000/api/v1/trainers`)
+          $http.get(`${server}/trainers`)
             .then((data) => {
               resolve(data)
             })
@@ -12,7 +13,7 @@ app.factory('TrainerFact', function($http){
       },
     update: (id, updateInfo) => {
       return new Promise((resolve, reject) => {
-        $http.patch(`http://localhost:3000/api/v1/trainers/${id}`, updateInfo)
+        $http.patch(`${server}/trainers/update/${id}`, updateInfo)
         .then((data) => {
           resolve()
         })
@@ -21,7 +22,7 @@ app.factory('TrainerFact', function($http){
     },
     delete: function(id) {
       return new Promise((resolve, reject) => {
-        $http.delete(`http://localhost:3000/api/trainers/${id}`)
+        $http.delete(`${server}/trainers/${id}`)
           .then((data) => {
             resolve()
           })

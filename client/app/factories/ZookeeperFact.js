@@ -1,19 +1,19 @@
 app.factory('ZookeeperFact', function($http){
-  console.log("here's the zookeeper factory")
+
+  const server = 'https://menagerie-api-123.herokuapp.com/api/v1'
 
     return {
     getAll: function() {
         return new Promise((resolve, reject) =>{
-          $http.get(`http://localhost:3000/api/v1/keepers`)
+          $http.get(`${server}/keepers`)
             .then((data) => {
-              console.log(`got some keepers`, data)
               resolve(data.data)
             })
         })
       },
     add: function(newZookeeper) {
       return new Promise((resolve, reject) =>{
-        $http.post(`http://localhost:3000/api/addZookeeper`, newZookeeper)
+        $http.post(`${server}/keepers/new`, newZookeeper)
           .then((data) => {
             resolve(data.data.zookeepers)
           })
@@ -21,7 +21,7 @@ app.factory('ZookeeperFact', function($http){
     },
     delete: function(id) {
       return new Promise((resolve, reject) => {
-        $http.delete(`http://localhost:3000/api/zookeeper/${id}`)
+        $http.delete(`${server}/keepers/${id}`)
           .then((data) => {
             resolve()
           })
