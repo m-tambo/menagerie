@@ -1,6 +1,7 @@
 <h1 id="title"><span class="main-title">Menagerie</span></h1>
 
 <a href="/#!/"><input type="button" class="route-btn" value="Home"></a>
+<a href="/#!/zoo"><input type="button" class="route-btn" value="View Animals"></a>
 <a href="/#!/add"><input type="button" class="route-btn" value="Make Edits"></a>
 
 <br />
@@ -10,5 +11,5 @@
   <a href='#!/keepers/{{keeper.id}}'><p><b>{{ keeper.name }}</b></p></a>
   <p>Age: {{keeper.age}} years old</p>
   <p>Gender: {{keeper.gender}} </p>
-  <p>Bio: {{keeper.bio}}</p>
+  <p><span style="line-height: normal;">Bio: {{keeper.bio}}</span></p>
   </div>
