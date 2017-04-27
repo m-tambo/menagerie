@@ -41,6 +41,12 @@ body {
   line-height: .3em;
 }
 
+.animalPic {
+  width: 90%;
+  margin: 4% 3% 0 3%;
+}
+
+
 /*_________keeper page__________*/
 .keeperCard {
   border: 1px solid black;
