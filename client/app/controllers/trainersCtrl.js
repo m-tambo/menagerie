@@ -1,15 +1,9 @@
 app.controller('TrainersCtrl', function($scope, TrainerFact) {
 
-  // console.log("$routeParams.id:", $routeParams.id)
-  // $scope.trainerId = $routeParams.id
-  // console.log("$scope.trainerId:", $scope.trainerId)
-
  const popPage = () => {
   TrainerFact.getAll()
     .then((trainers) => {
-      // console.log(trainers)
       $scope.trainers = trainers.data
-      console.log($scope.trainers)
       $scope.$apply()
     })
 }

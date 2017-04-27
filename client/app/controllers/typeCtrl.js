@@ -1,5 +1,5 @@
 app.controller('typeCtrl', function($scope, TypeFact){
-  console.log('typeCtrl firing')
+
 $scope.editing = false
 
 const popPage = () =>{
