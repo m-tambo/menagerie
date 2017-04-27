@@ -6,6 +6,10 @@ app.config(['$routeProvider', function($routeProvider){
         templateUrl: 'partials/home.html',
         controller: 'HomeCtrl'
       })
+      .when('/keeper', {
+        templateUrl: 'partials/keeper.html',
+        controller: 'keeperCtrl'
+      })
       .when('/add', {
         templateUrl: 'partials/addAnimals.html',
         controller: 'AddAnimalCtrl'
@@ -21,6 +25,10 @@ app.config(['$routeProvider', function($routeProvider){
       .when('/trainers', {
         templateUrl: 'partials/trainers.html',
         controller: 'TrainersCtrl'
+      })
+      .when('/type', {
+        templateUrl: 'partials/type.html',
+        controller: 'typeCtrl'
       })
       .otherwise({
         redirectTo: '/'
