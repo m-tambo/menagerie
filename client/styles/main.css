@@ -49,10 +49,28 @@ body {
   line-height: .3em;
 }
 
-.animalPic {
+.keeper-pic {
   width: 90%;
   margin: 4% 3% 0 3%;
+  border-radius: 100px;
 }
+
+
+/*_________trainer page__________*/
+.trainerPic {
+  border-radius: 100px;
+}
+
+.trainer-info {
+  margin: 3% 5% 0 5%;
+  display: inline-flex;
+}
+
+.trainer-info div:nth-child(2) {
+  margin-left: 10%;
+  min-width: 600px;
+}
+
 
 /*_________single animal page__________*/
 .single-animal {
