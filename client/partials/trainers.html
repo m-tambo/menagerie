@@ -1,0 +1,27 @@
+<h1 id="title"><span class="main-title">Menagerie</span></h1>
+<h3>Trainers</h3>
+
+<a href="/#!/"><input type="button" value="Home"></a>
+<a href="/#!/add"><input type="button" value="Make Edits"></a>
+<a href="/#!/zoo"><input type="button" value="View Animals"></a>
+
+<br />
+
+  <div class="trainerCard" ng-repeat="trainer in trainers">
+  <img class="trainerPic" ng-src="{{trainer.img}}">
+  <a href='#!/animals/{{trainer.id}}'><p><b>{{ trainer.name }}</b></p></a>
+  <p>Gender: {{trainer.gender}}</p>
+  <p>Age: {{trainer.age}} years old </p>
+  <p>Bio: {{trainer.bio}}</p>
+
+    <div>
+      <input type="button" value="remove" ng-click="remove(trainer.id)">
+      <input type="button" value="edit" ng-click="editing = !editing">
+    </div>
+    <div ng-if="editing">
+      <input type="text" ng-model="trainer.name">
+      <input type="text" ng-model="trainer.gender">
+      <input type="text" ng-model="trainer.age">
+      <input type="button" value="save" ng-click="save(trainer.id, trainer)">
+    </div>
+  </div>

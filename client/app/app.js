@@ -22,6 +22,10 @@ app.config(['$routeProvider', function($routeProvider){
         templateUrl: 'partials/singleAnimal.html',
         controller: 'animalCtrl'
       })
+      .when('/trainers', {
+        templateUrl: 'partials/trainers.html',
+        controller: 'TrainersCtrl'
+      })
       .when('/type', {
         templateUrl: 'partials/type.html',
         controller: 'typeCtrl'
