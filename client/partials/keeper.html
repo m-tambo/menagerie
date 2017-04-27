@@ -1,12 +1,12 @@
 <h1 id="title"><span class="main-title">Menagerie</span></h1>
 
-<a href="/#!/"><input type="button" value="Home"></a>
-<a href="/#!/add"><input type="button" value="Make Edits"></a>
+<a href="/#!/"><input type="button" class="route-btn" value="Home"></a>
+<a href="/#!/add"><input type="button" class="route-btn" value="Make Edits"></a>
 
 <br />
 
   <div class="keeperCard" ng-repeat="keeper in keepers">
-  <img class="animalPic" ng-src="{{keeper.img}}">
+  <img class="keeper-pic" ng-src="{{keeper.img}}">
   <a href='#!/keepers/{{keeper.id}}'><p><b>{{ keeper.name }}</b></p></a>
   <p>Age: {{keeper.age}} years old</p>
   <p>Gender: {{keeper.gender}} </p>

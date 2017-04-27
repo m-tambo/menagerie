@@ -1,19 +1,24 @@
 <h1 id="title"><span class="main-title">Menagerie</span></h1>
 <h3>Trainers</h3>
 
-<a href="/#!/"><input type="button" value="Home"></a>
-<a href="/#!/add"><input type="button" value="Make Edits"></a>
-<a href="/#!/zoo"><input type="button" value="View Animals"></a>
+<a href="/#!/"><input type="button" class="route-btn" value="Home"></a>
+<a href="/#!/add"><input type="button" class="route-btn" value="Make Edits"></a>
+<a href="/#!/zoo"><input type="button" class="route-btn" value="View Animals"></a>
 
 <br />
 
   <div class="trainerCard" ng-repeat="trainer in trainers">
-  <img class="trainerPic" ng-src="{{trainer.img}}">
-  <a href='#!/animals/{{trainer.id}}'><p><b>{{ trainer.name }}</b></p></a>
-  <p>Gender: {{trainer.gender}}</p>
-  <p>Age: {{trainer.age}} years old </p>
-  <p>Bio: {{trainer.bio}}</p>
-
+    <div class="trainer-info">
+      <div>
+        <img class="trainerPic" ng-src="{{trainer.img}}">
+      </div>
+      <div>
+        <a href='#!/trainers/{{trainer.id}}'><p><b>{{ trainer.name }}</b></p></a>
+        <p>Gender: {{trainer.gender}}</p>
+        <p>Age: {{trainer.age}} years old </p>
+        <p>Bio: {{trainer.bio}}</p>
+      </div>
+    </div>
     <div>
       <input type="button" value="remove" ng-click="remove(trainer.id)">
       <input type="button" value="edit" ng-click="editing = !editing">
@@ -24,4 +29,5 @@
       <input type="text" ng-model="trainer.age">
       <input type="button" value="save" ng-click="save(trainer.id, trainer)">
     </div>
+    <hr />
   </div>

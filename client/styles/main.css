@@ -1,6 +1,7 @@
 body {
-  background-color: #dfee9b;
+  background-color: #aecda4;
 }
+
 
 /*_________main page__________*/
 #title {
@@ -10,14 +11,19 @@ body {
 }
 
 .title-pic {
-  background-image: url('http://staugustine.com/sites/default/files/styles/slideshow__640x360/public/images/1077367_web1_copy_SAR_NEW_2017_01_25_farm-3.jpg?itok=j7IlGEU6');
-  min-height: 600px;
+  background-image: url('../peacock.jpg');
+  min-height: 350px;
   background-size: cover;
   margin: -5%;
+  opacity: .9;
 }
 
 .main-title {
   font-size: 2em;
+}
+
+.home-btns {
+  margin: -2% 0 0 30%;
 }
 
 
@@ -35,6 +41,12 @@ body {
   line-height: .3em;
 }
 
+.animalPic {
+  width: 90%;
+  margin: 4% 3% 0 3%;
+}
+
+
 /*_________keeper page__________*/
 .keeperCard {
   border: 1px solid black;
@@ -49,10 +61,28 @@ body {
   line-height: .3em;
 }
 
-.animalPic {
+.keeper-pic {
   width: 90%;
   margin: 4% 3% 0 3%;
+  border-radius: 100px;
 }
+
+
+/*_________trainer page__________*/
+.trainerPic {
+  border-radius: 100px;
+}
+
+.trainer-info {
+  margin: 3% 5% 0 5%;
+  display: inline-flex;
+}
+
+.trainer-info div:nth-child(2) {
+  margin-left: 10%;
+  min-width: 600px;
+}
+
 
 /*_________single animal page__________*/
 .single-animal {
@@ -77,9 +107,9 @@ a {
 }
 
 .route-btn {
-  border: 1px solid;
+  border: 2px solid #649fcd;
   min-height: 35px;
-  border-radius: 3px;
+  border-radius: 7px;
   font-family: 'Great Vibes', cursive;
   font-size: x-large;
   padding: 2%;
