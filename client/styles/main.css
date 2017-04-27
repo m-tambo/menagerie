@@ -77,9 +77,9 @@ a {
 }
 
 .route-btn {
-  border: 1px solid;
+  border: 2px solid #649fcd;
   min-height: 35px;
-  border-radius: 3px;
+  border-radius: 7px;
   font-family: 'Great Vibes', cursive;
   font-size: x-large;
   padding: 2%;
